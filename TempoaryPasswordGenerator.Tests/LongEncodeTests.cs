@@ -36,5 +36,21 @@ namespace TempoaryPasswordGenerator.Tests
             // Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void LongEncode_CantDecodeDecodWithInvalidSecret()
+        {
+            // Arrange
+            var validEncoder = new LongEncode(ValidSecret);
+            var invalidEncoder = new LongEncode(InvalidSecret);
+            var expected = (long)123456789;
+
+            // Act
+            var encoded = validEncoder.Encode(expected);
+            var result = invalidEncoder.Decode(encoded);
+
+            // Assert
+            Assert.NotEqual(expected, result);
+        }
     }
 }
