@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ThatsMrTalbot/TempoaryPasswordGenerator.svg?branch=master)](https://travis-ci.org/ThatsMrTalbot/TempoaryPasswordGenerator)
+[![Build Status](https://travis-ci.org/ThatsMrTalbot/TemporaryPasswordGenerator.svg?branch=master)](https://travis-ci.org/ThatsMrTalbot/TemporaryPasswordGenerator)
 # Temporary Password Generator
 
 This is a code experiment to create temporary time restricted passwords based on a secret.
