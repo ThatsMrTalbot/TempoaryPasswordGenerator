@@ -1,0 +1,9 @@
+sudo: false
+language: csharp
+solution: TempoaryPasswordGenerator.sln
+install:
+  - nuget restore TempoaryPasswordGenerator.sln
+  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release TempoaryPasswordGenerator.sln
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./TempoaryPasswordGenerator.Tests/bin/Release/TempoaryPasswordGenerator.Tests.dll
